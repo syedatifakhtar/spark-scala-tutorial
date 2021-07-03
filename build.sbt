@@ -2,13 +2,8 @@ name          := "spark-scala-tutorial"
 organization  := "com.lightbend"
 description   := "Spark Scala Tutorial"
 version       := "6.0.0"
-scalaVersion  := "2.13.6"
+scalaVersion  := "2.11.12"
 scalacOptions := Seq("-deprecation", "-unchecked", "-encoding", "utf8", "-Xlint")
-excludeFilter in unmanagedSources := (HiddenFileFilter || "*-script.scala")
-unmanagedResourceDirectories in Compile += baseDirectory.value / "conf"
-unmanagedResourceDirectories in Test += baseDirectory.value / "conf"
-//This is important for some programs to read input from stdin
-connectInput in run := true
 // Works better to run the examples and tests in separate JVMs.
 fork := true
 // Must run Spark tests sequentially because they compete for port 4040!

@@ -32,3 +32,4 @@ notebooks/output/
 notebooks/streaming-output/
 notebooks/tmp/
 notebooks/spark-warehouse/
+.bsp
